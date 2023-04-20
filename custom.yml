@@ -1,23 +1,94 @@
 feeds:
   - name: custom
     path: ../feeds_dir/custom
-  - name: helloworld
-    uri: https://github.com/fw876/helloworld.git
+  - name: small-package 
+    uri: https://github.com/kenzok8/small-package.git
     branch: master
 packages:
-  - luci-app-ssr-plus
-  - luci-app-ddns
+  - UnblockNeteaseMusic-Go
+  - UnblockNeteaseMusic
+  - adguardhome
+  - alist
+  - aria2
+  - autoupdate
+  - chinadns-ng
+  - cpulimit
   - ddns-scripts
-  - ddns-scripts-services
-  - ddns-scripts_aliyun
-  - luci-app-uhttpd
-  - dnsmasq-full
-  - luci-app-commands
-  - luci-app-mwan3
-  - luci-app-wireguard
-  - wireguard
-  - luci-app-eqos
-  - wireguard-tools
+  - ddnsgo
+  - dns2socks
+  - dns2tcp
+  - dnsproxy
+  - dockerd
+  - haproxy
+  - homeproxy
+  - hysteria
+  - ipt2socks
+  - luci-app-adguardhome
+  - luci-app-advanced
+  - luci-app-alist
+  - luci-app-argon-config
+  - luci-app-argonne-config
+  - luci-app-bypass
+  - luci-app-openclash
+  - luci-app-cloudflarespeedtest
+  - luci-app-ddns-go
+  - luci-app-dnscrypt-proxy2
+  - luci-app-dnsmasq-ipset
+  - luci-app-dockerman
+  - luci-app-easyupdate
+  - luci-app-godproxy
+  - luci-app-guest-wifi
+  - luci-app-istorex
+  - luci-app-mosdns
+  - luci-app-nextcloud
+  - luci-app-openvpn-server
+  - luci-app-passwall
+  - luci-app-passwall2
+  - luci-app-smartdns
+  - luci-app-ssr-plus
+  - luci-app-store
+  - luci-app-syncthing
+  - luci-app-unblockneteasemusic
+  - luci-app-v2raya
+  - luci-app-v2raya
+  - luci-app-wan-mac
+  - luci-app-watchcat
+  - luci-app-xray
+  - luci-theme-argon
+  - luci-theme-argonne
+  - luci-theme-atmaterial_new
+  - luci-theme-design
+  - luci-theme-edge
+  - luci-theme-ifit
+  - luci-theme-opentopd
+  - luci-theme-tomat
+  - naiveproxy
+  - nftables
+  - qBittorrent-Enhanced-Edition
+  - qBittorrent-static
+  - qBittorrent
+  - redsocks2
+  - sagernet-core
+  - shadowsocks-libev
+  - shadowsocks-rust
+  - shadowsocksr-libev
+  - simple-obfs
+  - sing-box
+  - smartdns
+  - ssocks
+  - tailscale
+  - tcping
+  - tcpping
+  - trojan-go
+  - trojan-plus
+  - trojan
+  - v2ray-core
+  - v2ray-geodata
+  - v2ray-plugin
+  - v2raya
+  - watchcat
+  - xray-core
+  - xray-plugin
 
 
 
@@ -31,3 +102,23 @@ diffconfig: |
   CONFIG_LUCI_LANG_zh_Hans=y
   CONFIG_BUSYBOX_CUSTOM=y
   CONFIG_BUSYBOX_CONFIG_FEATURE_FLOAT_SLEEP=y
+  
+  #koolproxy支持
+
+CONFIG_PACKAGE_iptables-mod-nat-extra=y
+
+CONFIG_PACKAGE_kmod-ipt-extra=y
+
+CONFIG_PACKAGE_diffutils=y
+
+CONFIG_PACKAGE_openssl-util=y
+
+CONFIG_PACKAGE_dnsmasq-full=y
+
+CONFIG_PACKAGE_ca-bundle=y
+
+CONFIG_PACKAGE_ca-certificates=y
+
+CONFIG_PACKAGE_libustream-openssl=n
+
+CONFIG_PACKAGE_lua-openssl=y
